@@ -1,24 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeyframeAnimations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azy-js-6kc">
+                                <rect key="frame" x="10" y="54" width="394" height="601"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTO-Za-YWL">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bal-HE-6aY">
+                                                <rect key="frame" x="9" y="9" width="2" height="2"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="2" id="GGv-RQ-29o"/>
+                                                    <constraint firstAttribute="height" constant="2" id="H0v-sr-af4"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Tid-qH-4Q0"/>
+                                            <constraint firstAttribute="height" constant="20" id="g8q-RQ-DwC"/>
+                                            <constraint firstItem="Bal-HE-6aY" firstAttribute="centerY" secondItem="uTO-Za-YWL" secondAttribute="centerY" id="hXz-Qc-99f"/>
+                                            <constraint firstItem="Bal-HE-6aY" firstAttribute="centerX" secondItem="uTO-Za-YWL" secondAttribute="centerX" id="r0c-5K-mTS"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="uTO-Za-YWL" firstAttribute="leading" secondItem="azy-js-6kc" secondAttribute="leading" id="azU-6Z-MuU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="btG-aH-m8D"/>
+                                    <constraint firstItem="uTO-Za-YWL" firstAttribute="top" secondItem="azy-js-6kc" secondAttribute="top" id="hXE-lx-zHa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77f-40-3ee">
+                                <rect key="frame" x="178.5" y="822" width="57" height="30"/>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="handleAnimateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lJO-z2-ZQb"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XFL-L9-1tO" userLabel="Timing StackView">
+                                <rect key="frame" x="41.5" y="675" width="331" height="53.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timing curve" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3b4-Gl-FOu">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="Ppw-cm-D1F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OV7-Uf-9t9">
+                                        <rect key="frame" x="0.0" y="22.5" width="331" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="YUI-5n-Tcx"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Linear"/>
+                                            <segment title="EaseIn"/>
+                                            <segment title="EaseOut"/>
+                                            <segment title="EaseInOut"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="WJG-19-div" userLabel="Keyframe StackView">
+                                <rect key="frame" x="62" y="748.5" width="290" height="53.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KeyFrame Curve" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8q-aK-wad">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="dW3-S9-VDP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eDi-lV-PSh">
+                                        <rect key="frame" x="0.0" y="22.5" width="290" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="zi2-K6-fV8"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Linear"/>
+                                            <segment title="Cubic"/>
+                                            <segment title="Cubic paced"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WJG-19-div" firstAttribute="top" secondItem="XFL-L9-1tO" secondAttribute="bottom" constant="20" id="4CF-Z3-vJf"/>
+                            <constraint firstItem="azy-js-6kc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="GYd-Bd-yiA"/>
+                            <constraint firstItem="WJG-19-div" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MGw-3W-fGf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="77f-40-3ee" secondAttribute="bottom" constant="10" id="NLc-FV-jyP"/>
+                            <constraint firstItem="77f-40-3ee" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PaQ-rw-GgR"/>
+                            <constraint firstItem="azy-js-6kc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="WAg-Ma-jjN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="azy-js-6kc" secondAttribute="trailing" constant="10" id="Xj9-uB-rxp"/>
+                            <constraint firstItem="XFL-L9-1tO" firstAttribute="top" secondItem="azy-js-6kc" secondAttribute="bottom" constant="20" id="aI8-sn-EKs"/>
+                            <constraint firstItem="77f-40-3ee" firstAttribute="top" secondItem="WJG-19-div" secondAttribute="bottom" constant="20" id="n6F-IC-cWT"/>
+                            <constraint firstItem="XFL-L9-1tO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vWm-km-nXD"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animateButton" destination="77f-40-3ee" id="wW2-vc-qHV"/>
+                        <outlet property="animationParentView" destination="azy-js-6kc" id="9nz-Rm-YAo"/>
+                        <outlet property="keyframeCurveControl" destination="eDi-lV-PSh" id="8Uj-jB-DU3"/>
+                        <outlet property="timingCurveControl" destination="OV7-Uf-9t9" id="5ED-I3-N46"/>
+                        <outlet property="viewToAnimate" destination="uTO-Za-YWL" id="61k-QA-BMr"/>
+                        <outlet property="viewXConstraint" destination="azU-6Z-MuU" id="3LP-lR-Xub"/>
+                        <outlet property="viewYConstraint" destination="hXE-lx-zHa" id="vg5-P3-x8v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="103.79464285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

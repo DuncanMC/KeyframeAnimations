@@ -15,6 +15,7 @@
 		AE4B314A2680B38B00A55630 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE4B31482680B38B00A55630 /* LaunchScreen.storyboard */; };
 		AE4B31552680B38C00A55630 /* KeyframeAnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B31542680B38C00A55630 /* KeyframeAnimationsTests.swift */; };
 		AE4B31602680B38C00A55630 /* KeyframeAnimationsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B315F2680B38C00A55630 /* KeyframeAnimationsUITests.swift */; };
+		AE4B317126813C6F00A55630 /* UIView+layerProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4B317026813C6F00A55630 /* UIView+layerProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		AE4B315B2680B38C00A55630 /* KeyframeAnimationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyframeAnimationsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE4B315F2680B38C00A55630 /* KeyframeAnimationsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyframeAnimationsUITests.swift; sourceTree = "<group>"; };
 		AE4B31612680B38C00A55630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE4B317026813C6F00A55630 /* UIView+layerProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+layerProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				AE4B313F2680B38800A55630 /* SceneDelegate.swift */,
 				AE4B31412680B38800A55630 /* ViewController.swift */,
 				AE4B31432680B38800A55630 /* Main.storyboard */,
+				AE4B317026813C6F00A55630 /* UIView+layerProperties.swift */,
 				AE4B31462680B38B00A55630 /* Assets.xcassets */,
 				AE4B31482680B38B00A55630 /* LaunchScreen.storyboard */,
 				AE4B314B2680B38B00A55630 /* Info.plist */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE4B31422680B38800A55630 /* ViewController.swift in Sources */,
+				AE4B317126813C6F00A55630 /* UIView+layerProperties.swift in Sources */,
 				AE4B313E2680B38800A55630 /* AppDelegate.swift in Sources */,
 				AE4B31402680B38800A55630 /* SceneDelegate.swift in Sources */,
 			);
